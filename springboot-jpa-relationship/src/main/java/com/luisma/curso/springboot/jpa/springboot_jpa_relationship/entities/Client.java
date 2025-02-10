@@ -15,7 +15,7 @@ public class Client {
     private Long id;
 
     private String name;
-    private String lastName;
+    private String lastname;
 
 
     public Client() {
@@ -23,7 +23,7 @@ public class Client {
 
     public Client(String name, String lastName) {
         this.name = name;
-        this.lastName = lastName;
+        this.lastname = lastName;
     }
 
     public Long getId() {
@@ -43,11 +43,11 @@ public class Client {
     }
 
     public String getLastName() {
-        return this.lastName;
+        return this.lastname;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastname = lastName;
     }
 
     public Client id(Long id) {
@@ -73,12 +73,12 @@ public class Client {
             return false;
         }
         Client client = (Client) o;
-        return Objects.equals(id, client.id) && Objects.equals(name, client.name) && Objects.equals(lastName, client.lastName);
+        return Objects.equals(id, client.id) && Objects.equals(name, client.name) && Objects.equals(lastname, client.lastname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, lastName);
+        return Objects.hash(id, name, lastname);
     }
 
     @Override
